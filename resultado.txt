@@ -1,0 +1,130 @@
+Figura = 42
+Ponto = 1 | x = 940 | y = 617 | Predição = [0]
+Ponto = 2 | x = 1061 | y = 699 | Predição = [1]
+Ponto = 3 | x = 1163 | y = 770 | Predição = [1]
+Ponto = 4 | x = 1248 | y = 828 | Predição = [1]
+Ponto = 5 | x = 1317 | y = 876 | Predição = [1]
+Ponto = 6 | x = 1284 | y = 867 | Predição = [1]
+Ponto = 7 | x = 1251 | y = 856 | Predição = [1]
+Nome do Classificador: SVC
+Pontos Não Autista: 1
+Pontos Autista: 6
+Pontos Total: 7
+
+Figura = 57
+Ponto = 1 | x = 845 | y = 505 | Predição = [0]
+Ponto = 2 | x = 866 | y = 463 | Predição = [1]
+Ponto = 3 | x = 887 | y = 430 | Predição = [1]
+Ponto = 4 | x = 854 | y = 413 | Predição = [1]
+Ponto = 5 | x = 881 | y = 392 | Predição = [1]
+Ponto = 6 | x = 711 | y = 496 | Predição = [0]
+Ponto = 7 | x = 583 | y = 549 | Predição = [1]
+Nome do Classificador: AdaBoostClassifier
+Pontos Não Autista: 2
+Pontos Autista: 5
+Pontos Total: 7
+
+Figura = 246
+Ponto = 1 | x = 1249 | y = 530 | Predição = [1]
+Ponto = 2 | x = 1259 | y = 557 | Predição = [0]
+Ponto = 3 | x = 1268 | y = 579 | Predição = [0]
+Ponto = 4 | x = 1221 | y = 585 | Predição = [0]
+Ponto = 5 | x = 1181 | y = 589 | Predição = [0]
+Ponto = 6 | x = 1161 | y = 537 | Predição = [0]
+Ponto = 7 | x = 1146 | y = 491 | Predição = [0]
+Nome do Classificador: ExtraTreesClassifier
+Pontos Não Autista: 6
+Pontos Autista: 1
+Pontos Total: 7
+
+Figura = 98
+Ponto = 1 | x = 1190 | y = 707 | Predição = [0]
+Ponto = 2 | x = 1142 | y = 714 | Predição = [0]
+Ponto = 3 | x = 1098 | y = 719 | Predição = [0]
+Ponto = 4 | x = 1064 | y = 707 | Predição = [0]
+Ponto = 5 | x = 1034 | y = 697 | Predição = [0]
+Ponto = 6 | x = 963 | y = 590 | Predição = [0]
+Ponto = 7 | x = 903 | y = 498 | Predição = [0]
+Nome do Classificador: BernoulliNB
+Pontos Não Autista: 7
+Pontos Autista: 0
+Pontos Total: 7
+
+Figura = 277
+Ponto = 1 | x = 1149 | y = 662 | Predição = [0]
+Ponto = 2 | x = 1135 | y = 662 | Predição = [0]
+Ponto = 3 | x = 1123 | y = 663 | Predição = [0]
+Ponto = 4 | x = 1113 | y = 663 | Predição = [0]
+Ponto = 5 | x = 1105 | y = 663 | Predição = [0]
+Ponto = 6 | x = 1057 | y = 651 | Predição = [1]
+Ponto = 7 | x = 1016 | y = 641 | Predição = [0]
+Nome do Classificador: AdaBoostClassifier
+Pontos Não Autista: 6
+Pontos Autista: 1
+Pontos Total: 7
+
+Figura = 192
+Ponto = 1 | x = 1020 | y = 533 | Predição = [0]
+Ponto = 2 | x = 1017 | y = 554 | Predição = [0]
+Ponto = 3 | x = 1014 | y = 572 | Predição = [0]
+Ponto = 4 | x = 1011 | y = 587 | Predição = [0]
+Ponto = 5 | x = 1009 | y = 600 | Predição = [1]
+Ponto = 6 | x = 1029 | y = 606 | Predição = [0]
+Ponto = 7 | x = 1046 | y = 611 | Predição = [1]
+Nome do Classificador: AdaBoostClassifier
+Pontos Não Autista: 5
+Pontos Autista: 2
+Pontos Total: 7
+
+Figura = 115
+Ponto = 1 | x = 771 | y = 377 | Predição = [0]
+Ponto = 2 | x = 736 | y = 368 | Predição = [0]
+Ponto = 3 | x = 712 | y = 369 | Predição = [0]
+Ponto = 4 | x = 694 | y = 371 | Predição = [0]
+Ponto = 5 | x = 667 | y = 380 | Predição = [0]
+Ponto = 6 | x = 708 | y = 395 | Predição = [0]
+Ponto = 7 | x = 745 | y = 409 | Predição = [0]
+Nome do Classificador: AdaBoostClassifier
+Pontos Não Autista: 7
+Pontos Autista: 0
+Pontos Total: 7
+
+Figura = 21
+Ponto = 1 | x = 1130 | y = 550 | Predição = [1]
+Ponto = 2 | x = 1109 | y = 548 | Predição = [1]
+Ponto = 3 | x = 1086 | y = 523 | Predição = [1]
+Ponto = 4 | x = 1073 | y = 524 | Predição = [1]
+Ponto = 5 | x = 1063 | y = 524 | Predição = [1]
+Ponto = 6 | x = 1066 | y = 469 | Predição = [0]
+Ponto = 7 | x = 1069 | y = 421 | Predição = [0]
+Nome do Classificador: SVC
+Pontos Não Autista: 2
+Pontos Autista: 5
+Pontos Total: 7
+
+Figura = 175
+Ponto = 1 | x = 1029 | y = 616 | Predição = [1]
+Ponto = 2 | x = 1009 | y = 602 | Predição = [0]
+Ponto = 3 | x = 991 | y = 592 | Predição = [0]
+Ponto = 4 | x = 976 | y = 584 | Predição = [0]
+Ponto = 5 | x = 963 | y = 579 | Predição = [0]
+Ponto = 6 | x = 1058 | y = 755 | Predição = [1]
+Ponto = 7 | x = 1138 | y = 906 | Predição = [1]
+Nome do Classificador: GaussianNB
+Pontos Não Autista: 4
+Pontos Autista: 3
+Pontos Total: 7
+
+Figura = 157
+Ponto = 1 | x = 739 | y = 582 | Predição = [1]
+Ponto = 2 | x = 742 | y = 555 | Predição = [1]
+Ponto = 3 | x = 745 | y = 535 | Predição = [1]
+Ponto = 4 | x = 749 | y = 520 | Predição = [1]
+Ponto = 5 | x = 754 | y = 510 | Predição = [1]
+Ponto = 6 | x = 872 | y = 583 | Predição = [1]
+Ponto = 7 | x = 973 | y = 647 | Predição = [1]
+Nome do Classificador: GaussianNB
+Pontos Não Autista: 0
+Pontos Autista: 7
+Pontos Total: 7
+

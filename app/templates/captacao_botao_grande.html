@@ -1,0 +1,184 @@
+<html>
+
+<style>
+* {
+  text-align:center;
+  font-size : 20px;
+}
+
+.divisao
+{
+
+
+}
+
+img
+{
+  max-width: 100%;
+  height: 85vh;
+  width: auto;
+  vertical-align: bottom;
+}
+
+
+.botao{
+     width: 10%;
+     height: 10%;
+     font-size : 20px;
+}
+
+
+</style>
+
+<head>
+
+{{ JSGlue.include() }}
+
+
+
+
+  <script src="{{ url_for('static', filename = 'WebGazer/www/webgazer.js') }}" type="text/javascript" ></script>
+  <script src="{{ url_for('static', filename = 'jquery-3.6.0.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'FileSaver.js') }}"></script>
+  <script type = "text/javascript">
+
+  webgazer.begin();
+
+  var sorteio_numero = 0;
+  var numeros_sorteados = [];
+  var contagem = 0;
+  var numero_fotos = 300;
+  var coordenadas = [];
+  var prediction;
+  var tempo_transicao_imagem = 7000;
+  var tempo_captacao_pontos = 1000;
+  var numero_captacao_pontos = tempo_transicao_imagem/tempo_captacao_pontos;
+  var x;
+  var y;
+
+    coordenadas.push("Foto" + " " + "x" + " " + "y"+ " "+ "Larg_Imagem"+ " "+ "Alt_Imagem"+ " "+ "Larg_Tela"+ " "+ "Alt_Tela"+ " "+ "Dist_Larg"+ " "+ "Dist_Alt"+"\n");
+
+  function liga_apresentacao(){
+    z = setInterval(function () { contador() }, tempo_transicao_imagem);
+  }
+
+  function contador(){
+
+    if (contagem==numero_fotos)
+    {
+      //break;
+      clearinterval(z);
+    }
+
+    for (var i = 0; i < numero_captacao_pontos; i++) {
+
+      setTimeout(function() {
+
+        webgazer.getCurrentPrediction().then(prediction => {
+          if (prediction) {
+            x = prediction.x;
+            y = prediction.y;
+            //coordenadas.push(sorteio_numero + " " + x + " " + y + " " + document.getElementById("imagem").height + " " + document.getElementById("imagem").width + "\n");
+            coordenadas.push(sorteio_numero + " " + Math.round(x) + " " + Math.round(y) + " " + document.querySelector("#imagem").clientWidth + " " + document.querySelector("#imagem").clientHeight + " " + $(window).width() + " " + $(window).height() + " " + document.getElementById('imagem').offsetLeft + " " + document.getElementById('imagem').offsetTop + "\n");
+          }
+        })
+
+      }, tempo_captacao_pontos);
+
+    }
+
+    var elemento = document.getElementById("imagem");
+    while (elemento.firstChild) {
+      elemento.removeChild(elemento.firstChild);
+    }
+
+    sorteio_numero = Math.floor(Math.random() * numero_fotos) + 1;
+
+    while(numeros_sorteados.find(element => element == sorteio_numero)!=undefined)
+    {
+      sorteio_numero = Math.floor(Math.random() * numero_fotos) + 1;
+    }
+
+    numeros_sorteados.push(sorteio_numero);
+    //alert(numeros_sorteados)
+
+    document.getElementById("numero_imagem").innerHTML = sorteio_numero;
+
+
+    var img = document.createElement("img");
+    document.getElementById("imagem").src = "/static/Images/"+sorteio_numero+".png";
+    document.getElementById("imagem").appendChild(img);
+
+
+    contagem++;
+
+  }
+
+  function desliga_apresentacao() {
+    clearInterval(z);
+  }
+
+  function mostra_sorteio(){
+    alert(numeros_sorteados);
+  }
+
+  function mostra_coordenadas(){
+    alert(coordenadas);
+  }
+
+  function download_coordenadas() {
+
+
+// some movie data
+//var movies = "Jarriv"
+
+$.ajax({
+url: Flask.url_for('my_function'),
+type: 'POST',
+data: JSON.stringify(coordenadas),   // converts js value to JSON string
+})
+.done(function(result){     // on success get the return object from server
+    console.log(result)     // do whatever with it. In this case see it in console
+})
+
+    }
+
+
+    </script>
+
+  </head>
+
+
+
+  <body style="background-color:gray;">
+
+    <div>
+
+      <p>
+        <td >
+          <input type = "button" class="botao" onclick = "liga_apresentacao()" value = "Ligar" />
+        </td>
+
+        <td>
+          <input type = "button" class="botao" onclick = "desliga_apresentacao()" value = "Desligar" />
+        </td>
+
+        <td>
+          <input type = "button" class="botao"  onclick= "download_coordenadas()" value = "Avaliar" />
+        </td>
+      </p>
+
+      <p id="numero_imagem"></p>
+
+    </div>
+
+
+    <div class="divisao">
+      <p>
+        <img id='imagem'/>
+      </p>
+
+    </div>
+
+  </body>
+  </html>

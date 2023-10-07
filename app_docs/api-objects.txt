@@ -1,0 +1,12 @@
+app	app-module.html
+app.app	app-module.html#app
+app.jsglue	app-module.html#jsglue
+app.routes	app.routes-module.html
+app.routes.captacao	app.routes-module.html#captacao
+app.routes.upload_file	app.routes-module.html#upload_file
+app.routes.index	app.routes-module.html#index
+app.routes.my_function	app.routes-module.html#my_function
+app.routes.upload_file_final	app.routes-module.html#upload_file_final
+app.routes.student	app.routes-module.html#student
+app.routes.classif_lista_pontos	app.routes-module.html#classif_lista_pontos
+app.routes.result	app.routes-module.html#result
